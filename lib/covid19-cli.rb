@@ -1,4 +1,4 @@
-#require 'covid19-cli/version'
+require 'covid19-cli/version'
 
 module Covid19
   class Error < StandardError; end 

@@ -8,9 +8,13 @@ module Covid19
     end
 
     desc 'all_continents', 'List all continents data'
-
     def all_continents
       puts Covid19::Services::Covid19Data.all_continents
+    end
+
+    desc 'all countries', 'List all countries data'
+    def all_countries
+      puts Covid19::Services::Covid19Data.all_countries
     end
   end
 end
