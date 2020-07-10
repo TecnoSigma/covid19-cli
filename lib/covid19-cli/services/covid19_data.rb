@@ -10,21 +10,32 @@ module Covid19
 
       class << self
         def all_continents
-          data(RESOURCES[:continents])
+          data(resource: RESOURCES[:continents])
         end
 
         def all_countries
-          data(RESOURCES[:countries])
+          data(resource: RESOURCES[:countries])
         end
 
-        def data(resource)
-          response = RestClient.get("#{URI}/#{resource}")
+        def continent(continent_name)
+          data(resource: RESOURCES[:continents], query: titleize(continent_name))
+        end
+
+        def data(resource:, query: nil)
+          response = RestClient.get("#{URI}/#{resource}/#{query}")
  
           JSON.parse(response.body)
         end
+
+        def titleize(string)
+          string
+            .split('_')
+            .map { |str| str.capitalize }
+            .join('%20')
+        end
       end
 
-      private_class_method :data
+      private_class_method :data, :titleize
     end
   end
 end

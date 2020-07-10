@@ -16,4 +16,13 @@ RSpec.describe 'Covid19::Services::Covid19Data' do
       expect(result).not_to be_empty
     end 
   end
+
+  describe '.continent' do
+    it 'returns country data in JSON format' do
+      continent_name = 'asia'
+      result = Covid19::Services::Covid19Data.continent(continent_name)
+
+      expect(result).not_to be_empty
+    end
+  end
 end

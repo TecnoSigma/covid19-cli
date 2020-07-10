@@ -16,5 +16,10 @@ module Covid19
     def all_countries
       puts Covid19::Services::Covid19Data.all_countries
     end
+
+    desc 'continent CONTINENT_NAME', 'List continent data'
+    def continent(continent_name)
+      puts Covid19::Services::Covid19Data.continent(continent_name)
+    end
   end
 end
