@@ -21,6 +21,10 @@ module Covid19
           data(resource: RESOURCES[:continents], query: titleize(continent_name))
         end
 
+        def country(country_name)
+          data(resource: RESOURCES[:countries], query: titleize(country_name))
+        end
+
         def data(resource:, query: nil)
           response = RestClient.get("#{URI}/#{resource}/#{query}")
  
