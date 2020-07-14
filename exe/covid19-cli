@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'covid19/cli/client'
+require 'covid19/client'
 
-Covid19::Cli::Client.start
+Covid19::Client.start
