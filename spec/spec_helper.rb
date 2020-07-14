@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "covid19/cli"
+require "covid19/client"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
