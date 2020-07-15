@@ -26,6 +26,8 @@ In terminal:
 
 ### Commands List
 
+---
+
 **Show available commands**
 ```shell
 covid19-cli
@@ -39,7 +41,7 @@ covid19-cli
   covid19-cli help [COMMAND]            # Describe available commands or one specific command
 ```
 
-##### Getting data
+---
 
 **Get specific continent data in hash format**
 ```shell
@@ -49,6 +51,8 @@ covid19-cli continent africa
 ```shell
 {"updated"=>1594779763763, "cases"=>628885, "todayCases"=>0, "deaths"=>13803, "todayDeaths"=>0, "recovered"=>316780, "todayRecovered"=>0, "active"=>298302, "critical"=>982, "casesPerOneMillion"=>468.8, "deathsPerOneMillion"=>10.29, "tests"=>6052901, "testsPerOneMillion"=>4512.07, "population"=>1341491868, "continent"=>"Africa", "activePerOneMillion"=>222.37, "recoveredPerOneMillion"=>236.14, "criticalPerOneMillion"=>0.73, "continentInfo"=>{"lat"=>1.7383867, "long"=>-16.3094636}, "countries"=>["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo", "Côte d'Ivoire", "DRC", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Mayotte", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Réunion", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Western Sahara", "Zambia", "Zimbabwe"]}
 ```
+
+---
 
 **Get specific continent data in table format**
 ```shell
@@ -63,6 +67,8 @@ covid19-cli continent africa --table
 +---------+------------+--------+-------------+-----------+----------------+---------+----------+-----------+--------------------+
 ```
 
+---
+
 **Get specific country data in hash format**
 ```shell
 covid19-cli country canada
@@ -71,6 +77,8 @@ covid19-cli country canada
 ```ruby
 {"updated"=>1594779763526, "country"=>"Canada", "countryInfo"=>{"_id"=>124, "iso2"=>"CA", "iso3"=>"CAN", "lat"=>60, "long"=>-95, "flag"=>"https://disease.sh/assets/img/flags/ca.png"}, "cases"=>108486, "todayCases"=>0, "deaths"=>8798, "todayDeaths"=>0, "recovered"=>72170, "todayRecovered"=>0, "active"=>27518, "critical"=>2170, "casesPerOneMillion"=>2873, "deathsPerOneMillion"=>233, "tests"=>3302483, "testsPerOneMillion"=>87473, "population"=>37754249, "continent"=>"North America", "oneCasePerPeople"=>348, "oneDeathPerPeople"=>4291, "oneTestPerPeople"=>11, "activePerOneMillion"=>728.87, "recoveredPerOneMillion"=>1911.57, "criticalPerOneMillion"=>57.48}
 ```
+
+---
 
 **Get specific country data in table format**
 ```shell
@@ -85,6 +93,8 @@ covid19-cli country canada --table
 +---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
 ```
 
+---
+
 **Get continent general data in hash format**
 ```shell
 covid19-cli all_continents
@@ -98,6 +108,8 @@ covid19-cli all_continents
 {"updated"=>1594779763763, "cases"=>628885, "todayCases"=>0, "deaths"=>13803, "todayDeaths"=>0, "recovered"=>316780, "todayRecovered"=>0, "active"=>298302, "critical"=>982, "casesPerOneMillion"=>468.8, "deathsPerOneMillion"=>10.29, "tests"=>6052901, "testsPerOneMillion"=>4512.07, "population"=>1341491868, "continent"=>"Africa", "activePerOneMillion"=>222.37, "recoveredPerOneMillion"=>236.14, "criticalPerOneMillion"=>0.73, "continentInfo"=>{"lat"=>1.7383867, "long"=>-16.3094636}, "countries"=>["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo", "Côte d'Ivoire", "DRC", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Mayotte", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Réunion", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Western Sahara", "Zambia", "Zimbabwe"]}
 {"updated"=>1594779763764, "cases"=>12154, "todayCases"=>239, "deaths"=>133, "todayDeaths"=>3, "recovered"=>9533, "todayRecovered"=>93, "active"=>2488, "critical"=>28, "casesPerOneMillion"=>296.96, "deathsPerOneMillion"=>3.25, "tests"=>3672053, "testsPerOneMillion"=>89719.88, "population"=>40927974, "continent"=>"Australia/Oceania", "activePerOneMillion"=>60.79, "recoveredPerOneMillion"=>232.92, "criticalPerOneMillion"=>0.68, "continentInfo"=>{"lat"=>-8.6599161, "long"=>91.1469847}, "countries"=>["Australia", "Fiji", "French Polynesia", "New Caledonia", "New Zealand", "Papua New Guinea"]}
 ```
+
+---
 
 **Get continent general data in table format**
 ```shell
@@ -116,6 +128,8 @@ covid19-cli all_continents
 | Australia/Oceania |    12 154 |        239 |     133 |           3 |     9 533 |             93 |     2 488 |       28 |   3 672 053 |          89 719.88 |
 +-------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+-------------+--------------------+
 ```
+
+---
 
 **Get countries general data in hash format**
 ```shell
@@ -339,6 +353,8 @@ covid19-cli all_countries
 {"updated"=>1594779763649, "country"=>"Zambia", "countryInfo"=>{"_id"=>894, "iso2"=>"ZM", "iso3"=>"ZMB", "lat"=>-15, "long"=>30, "flag"=>"https://disease.sh/assets/img/flags/zm.png"}, "cases"=>1895, "todayCases"=>0, "deaths"=>42, "todayDeaths"=>0, "recovered"=>1412, "todayRecovered"=>0, "active"=>441, "critical"=>1, "casesPerOneMillion"=>103, "deathsPerOneMillion"=>2, "tests"=>56825, "testsPerOneMillion"=>3089, "population"=>18397649, "continent"=>"Africa", "oneCasePerPeople"=>9709, "oneDeathPerPeople"=>438039, "oneTestPerPeople"=>324, "activePerOneMillion"=>23.97, "recoveredPerOneMillion"=>76.75, "criticalPerOneMillion"=>0.05}
 {"updated"=>1594779763674, "country"=>"Zimbabwe", "countryInfo"=>{"_id"=>716, "iso2"=>"ZW", "iso3"=>"ZWE", "lat"=>-20, "long"=>30, "flag"=>"https://disease.sh/assets/img/flags/zw.png"}, "cases"=>1064, "todayCases"=>0, "deaths"=>20, "todayDeaths"=>0, "recovered"=>343, "todayRecovered"=>0, "active"=>701, "critical"=>0, "casesPerOneMillion"=>72, "deathsPerOneMillion"=>1, "tests"=>93248, "testsPerOneMillion"=>6271, "population"=>14870201, "continent"=>"Africa", "oneCasePerPeople"=>13976, "oneDeathPerPeople"=>743510, "oneTestPerPeople"=>159, "activePerOneMillion"=>47.14, "recoveredPerOneMillion"=>23.07, "criticalPerOneMillion"=>0}
 ```
+
+---
 
 **Get countries general data in table format**
 ```shell
@@ -566,6 +582,8 @@ covid19-cli all_countries --table
 |                         Zimbabwe |     1 064 |          0 |      20 |           0 |       343 |              0 |       701 |        0 |     93 248 |              6 271 |    14 870 201 |
 +----------------------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+------------+--------------------+---------------+
 ```
+
+---
 
 ## Development
 
