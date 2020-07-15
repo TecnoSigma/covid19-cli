@@ -593,7 +593,10 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Used Gems
 
+* [bundler](https://rubygems.org/gems/bundler)
 * [httparty](https://rubygems.org/gems/httparty)
+* [rake](https://rubygems.org/gems/rake)
+* [rspec](https://rubygems.org/gems/rspec)
 * [text-table](https://rubygems.org/gems/text-table)
 * [thor](https://rubygems.org/gems/thor)
 
