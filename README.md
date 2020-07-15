@@ -2,7 +2,7 @@
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/covid19/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Gem that collect COVID-19 global stats through [disease.sh](https://corona.lmao.ninja/).
+Gem that collect COVID-19 global stats through [disease.sh](https://corona.lmao.ninja/).
 
 ## Installation
 
@@ -22,17 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-### Examples
-
 In terminal:
 
-##### Commands List
+### Commands List
 
-**Command:**
+**Show available commands**
 ```shell
 covid19-cli
 ```
-
 **Output**
 ```shell
   covid19-cli all countries             # List all countries data
@@ -44,42 +41,20 @@ covid19-cli
 
 ##### Getting data
 
-**Command**
-```shell
-covid19-cli country canada
-```
-**Output (hash)**
-```ruby
-{"updated"=>1594779763526, "country"=>"Canada", "countryInfo"=>{"_id"=>124, "iso2"=>"CA", "iso3"=>"CAN", "lat"=>60, "long"=>-95, "flag"=>"https://disease.sh/assets/img/flags/ca.png"}, "cases"=>108486, "todayCases"=>0, "deaths"=>8798, "todayDeaths"=>0, "recovered"=>72170, "todayRecovered"=>0, "active"=>27518, "critical"=>2170, "casesPerOneMillion"=>2873, "deathsPerOneMillion"=>233, "tests"=>3302483, "testsPerOneMillion"=>87473, "population"=>37754249, "continent"=>"North America", "oneCasePerPeople"=>348, "oneDeathPerPeople"=>4291, "oneTestPerPeople"=>11, "activePerOneMillion"=>728.87, "recoveredPerOneMillion"=>1911.57, "criticalPerOneMillion"=>57.48}
-```
-
-**Command**
-```shell
-covid19-cli country canada --table
-```
-**Output (table)**
-```shell
-+---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
-|  cases  | todayCases | deaths | todayDeaths | recovered | todayRecovered | active | critical |   tests   | testsPerOneMillion |
-+---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
-| 108 486 |          0 |  8 798 |           0 |    72 170 |              0 | 27 518 |    2 170 | 3 302 483 |             87 473 |
-+---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
-```
-
-**Command**
+**Get specific continent data in hash format**
 ```shell
 covid19-cli continent africa
 ```
-**Output (hash)**
+**Output**
 ```shell
 {"updated"=>1594779763763, "cases"=>628885, "todayCases"=>0, "deaths"=>13803, "todayDeaths"=>0, "recovered"=>316780, "todayRecovered"=>0, "active"=>298302, "critical"=>982, "casesPerOneMillion"=>468.8, "deathsPerOneMillion"=>10.29, "tests"=>6052901, "testsPerOneMillion"=>4512.07, "population"=>1341491868, "continent"=>"Africa", "activePerOneMillion"=>222.37, "recoveredPerOneMillion"=>236.14, "criticalPerOneMillion"=>0.73, "continentInfo"=>{"lat"=>1.7383867, "long"=>-16.3094636}, "countries"=>["Algeria", "Angola", "Benin", "Botswana", "Burkina Faso", "Burundi", "Cabo Verde", "Cameroon", "Central African Republic", "Chad", "Comoros", "Congo", "Côte d'Ivoire", "DRC", "Djibouti", "Egypt", "Equatorial Guinea", "Eritrea", "Ethiopia", "Gabon", "Gambia", "Ghana", "Guinea", "Guinea-Bissau", "Kenya", "Lesotho", "Liberia", "Libyan Arab Jamahiriya", "Madagascar", "Malawi", "Mali", "Mauritania", "Mauritius", "Mayotte", "Morocco", "Mozambique", "Namibia", "Niger", "Nigeria", "Rwanda", "Réunion", "Sao Tome and Principe", "Senegal", "Seychelles", "Sierra Leone", "Somalia", "South Africa", "South Sudan", "Sudan", "Swaziland", "Tanzania", "Togo", "Tunisia", "Uganda", "Western Sahara", "Zambia", "Zimbabwe"]}
 ```
 
-**Command**
+**Get specific continent data in table format**
 ```shell
 covid19-cli continent africa --table
 ```
-**Output (table)**
+**Output**
 ```shell
 +---------+------------+--------+-------------+-----------+----------------+---------+----------+-----------+--------------------+
 |  cases  | todayCases | deaths | todayDeaths | recovered | todayRecovered | active  | critical |   tests   | testsPerOneMillion |
@@ -88,11 +63,33 @@ covid19-cli continent africa --table
 +---------+------------+--------+-------------+-----------+----------------+---------+----------+-----------+--------------------+
 ```
 
-**Command**
+**Get specific country data in hash format**
+```shell
+covid19-cli country canada
+```
+**Output**
+```ruby
+{"updated"=>1594779763526, "country"=>"Canada", "countryInfo"=>{"_id"=>124, "iso2"=>"CA", "iso3"=>"CAN", "lat"=>60, "long"=>-95, "flag"=>"https://disease.sh/assets/img/flags/ca.png"}, "cases"=>108486, "todayCases"=>0, "deaths"=>8798, "todayDeaths"=>0, "recovered"=>72170, "todayRecovered"=>0, "active"=>27518, "critical"=>2170, "casesPerOneMillion"=>2873, "deathsPerOneMillion"=>233, "tests"=>3302483, "testsPerOneMillion"=>87473, "population"=>37754249, "continent"=>"North America", "oneCasePerPeople"=>348, "oneDeathPerPeople"=>4291, "oneTestPerPeople"=>11, "activePerOneMillion"=>728.87, "recoveredPerOneMillion"=>1911.57, "criticalPerOneMillion"=>57.48}
+```
+
+**Get specific country data in table format**
+```shell
+covid19-cli country canada --table
+```
+**Output**
+```shell
++---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
+|  cases  | todayCases | deaths | todayDeaths | recovered | todayRecovered | active | critical |   tests   | testsPerOneMillion |
++---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
+| 108 486 |          0 |  8 798 |           0 |    72 170 |              0 | 27 518 |    2 170 | 3 302 483 |             87 473 |
++---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
+```
+
+**Get continent general data in hash format**
 ```shell
 covid19-cli all_continents
 ```
-**Output (hash)**
+**Output**
 ```shell
 {"updated"=>1594779763760, "cases"=>4152507, "todayCases"=>7057, "deaths"=>188977, "todayDeaths"=>837, "recovered"=>1939661, "todayRecovered"=>4932, "active"=>2023869, "critical"=>19737, "casesPerOneMillion"=>7046.81, "deathsPerOneMillion"=>320.69, "tests"=>49174748, "testsPerOneMillion"=>83449.65, "population"=>589274482, "continent"=>"North America", "activePerOneMillion"=>3434.51, "recoveredPerOneMillion"=>3291.61, "criticalPerOneMillion"=>33.49, "continentInfo"=>{"lat"=>31.6768272, "long"=>-146.4707474}, "countries"x'=>["Anguilla", "Antigua and Barbuda", "Aruba", "Bahamas", "Barbados", "Belize", "Bermuda", "British Virgin Islands", "Canada", "Caribbean Netherlands", "Cayman Islands", "Costa Rica", "Cuba", "Curaçao", "Dominica", "Dominican Republic", "El Salvador", "Greenland", "Grenada", "Guadeloupe", "Guatemala", "Haiti", "Honduras", "Jamaica", "Martinique", "Mexico", "Montserrat", "Nicaragua", "Panama", "Saint Kitts and Nevis", "Saint Lucia", "Saint Martin", "Saint Pierre Miquelon", "Saint Vincent and the Grenadines", "Sint Maarten", "St. Barth", "Trinidad and Tobago", "Turks and Caicos Islands", "USA"]}
 {"updated"=>1594779763761, "cases"=>2993241, "todayCases"=>1617, "deaths"=>108399, "todayDeaths"=>32, "recovered"=>1895637, "todayRecovered"=>525, "active"=>989205, "critical"=>13640, "casesPerOneMillion"=>6946.69, "deathsPerOneMillion"=>251.57, "tests"=>11303001, "testsPerOneMillion"=>26231.92, "population"=>430887254, "continent"=>"South America", "activePerOneMillion"=>2295.74, "recoveredPerOneMillion"=>4399.38, "criticalPerOneMillion"=>31.66, "continentInfo"=>{"lat"=>-15.6551563, "long"=>-100.7484231}, "countries"=>["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Ecuador", "Falkland Islands (Malvinas)", "French Guiana", "Guyana", "Paraguay", "Peru", "Suriname", "Uruguay", "Venezuela"]}
@@ -102,11 +99,11 @@ covid19-cli all_continents
 {"updated"=>1594779763764, "cases"=>12154, "todayCases"=>239, "deaths"=>133, "todayDeaths"=>3, "recovered"=>9533, "todayRecovered"=>93, "active"=>2488, "critical"=>28, "casesPerOneMillion"=>296.96, "deathsPerOneMillion"=>3.25, "tests"=>3672053, "testsPerOneMillion"=>89719.88, "population"=>40927974, "continent"=>"Australia/Oceania", "activePerOneMillion"=>60.79, "recoveredPerOneMillion"=>232.92, "criticalPerOneMillion"=>0.68, "continentInfo"=>{"lat"=>-8.6599161, "long"=>91.1469847}, "countries"=>["Australia", "Fiji", "French Polynesia", "New Caledonia", "New Zealand", "Papua New Guinea"]}
 ```
 
-**Command**
+**Get continent general data in table format**
 ```shell
 covid19-cli all_continents
 ```
-**Output (table)**
+**Output**
 ```shell
 +-------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+-------------+--------------------+
 |     continent     |   cases   | todayCases | deaths  | todayDeaths | recovered | todayRecovered |  active   | critical |    tests    | testsPerOneMillion |
@@ -120,11 +117,11 @@ covid19-cli all_continents
 +-------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+-------------+--------------------+
 ```
 
-**Command**
+**Get countries general data in hash format**
 ```shell
 covid19-cli all_countries
 ```
-**Output (hash)**
+**Output**
 ```shell
 {"updated"=>1594779763557, "country"=>"Afghanistan", "countryInfo"=>{"_id"=>4, "iso2"=>"AF", "iso3"=>"AFG", "lat"=>33, "long"=>65, "flag"=>"https://disease.sh/assets/img/flags/af.png"}, "cases"=>34740, "todayCases"=>0, "deaths"=>1048, "todayDeaths"=>0, "recovered"=>21454, "todayRecovered"=>0, "active"=>12238, "critical"=>31, "casesPerOneMillion"=>892, "deathsPerOneMillion"=>27, "tests"=>81252, "testsPerOneMillion"=>2086, "population"=>38954218, "continent"=>"Asia", "oneCasePerPeople"=>1121, "oneDeathPerPeople"=>37170, "oneTestPerPeople"=>479, "activePerOneMillion"=>314.16, "recoveredPerOneMillion"=>550.75, "criticalPerOneMillion"=>0.8}
 {"updated"=>1594779763626, "country"=>"Albania", "countryInfo"=>{"_id"=>8, "iso2"=>"AL", "iso3"=>"ALB", "lat"=>41, "long"=>20, "flag"=>"https://disease.sh/assets/img/flags/al.png"}, "cases"=>3667, "todayCases"=>0, "deaths"=>97, "todayDeaths"=>0, "recovered"=>2062, "todayRecovered"=>0, "active"=>1508, "critical"=>10, "casesPerOneMillion"=>1274, "deathsPerOneMillion"=>34, "tests"=>29334, "testsPerOneMillion"=>10194, "population"=>2877667, "continent"=>"Europe", "oneCasePerPeople"=>785, "oneDeathPerPeople"=>29667, "oneTestPerPeople"=>98, "activePerOneMillion"=>524.04, "recoveredPerOneMillion"=>716.55, "criticalPerOneMillion"=>3.48}
@@ -343,11 +340,11 @@ covid19-cli all_countries
 {"updated"=>1594779763674, "country"=>"Zimbabwe", "countryInfo"=>{"_id"=>716, "iso2"=>"ZW", "iso3"=>"ZWE", "lat"=>-20, "long"=>30, "flag"=>"https://disease.sh/assets/img/flags/zw.png"}, "cases"=>1064, "todayCases"=>0, "deaths"=>20, "todayDeaths"=>0, "recovered"=>343, "todayRecovered"=>0, "active"=>701, "critical"=>0, "casesPerOneMillion"=>72, "deathsPerOneMillion"=>1, "tests"=>93248, "testsPerOneMillion"=>6271, "population"=>14870201, "continent"=>"Africa", "oneCasePerPeople"=>13976, "oneDeathPerPeople"=>743510, "oneTestPerPeople"=>159, "activePerOneMillion"=>47.14, "recoveredPerOneMillion"=>23.07, "criticalPerOneMillion"=>0}
 ```
 
-**Command**
+**Get countries general data in table format**
 ```shell
 covid19-cli all_countries --table
 ```
-**Output (table)**
+**Output**
 ```shell
 +----------------------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+------------+--------------------+---------------+
 |             country              |   cases   | todayCases | deaths  | todayDeaths | recovered | todayRecovered |  active   | critical |   tests    | testsPerOneMillion |  population   |
@@ -575,6 +572,12 @@ covid19-cli all_countries --table
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
 
 To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+## Used Gems
+
+* [httparty](https://rubygems.org/gems/httparty)
+* [text-table](https://rubygems.org/gems/text-table)
+* [thor](https://rubygems.org/gems/thor)
 
 ## Contributing
 
