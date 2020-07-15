@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    covid19-cli (0.2.0)
+    covid19-cli (0.3.0)
       httparty
       text-table
       thor
