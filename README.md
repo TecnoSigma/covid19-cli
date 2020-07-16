@@ -34,13 +34,30 @@ covid19-cli
 ```
 **Output**
 ```shell
-  covid19-cli all countries             # List all countries data
-  covid19-cli all_continents            # List all continents data
-  covid19-cli continent CONTINENT_NAME  # List continent data
-  covid19-cli country COUNTRY_NAME      # List country data
-  covid19-cli help [COMMAND]            # Describe available commands or one specific command
+covid19-cli all countries             # List all countries data
+covid19-cli all_continents            # List all continents data
+covid19-cli continent CONTINENT_NAME  # List continent data
+covid19-cli country COUNTRY_NAME      # List country data
+covid19-cli help [COMMAND]            # Describe available commands or one specific command
 ```
+---
+**Show available options**
+```shell
+covid19-cli -h <command_name>
+```
+**Output**
+```shell
+Usage:
+  covid19-cli <command_name>
 
+Options:
+  -t, [--table=TABLE]
+  -c, [--chart=CHART]
+      [--colored=COLORED] <only charts>
+
+<Command description>
+
+```
 ---
 
 **Get specific continent data in hash format**
@@ -69,6 +86,79 @@ covid19-cli continent africa --table
 
 ---
 
+**Render specific continent data chart**
+```shell
+covid19-cli continent africa --chart
+```
+**Output**
+```shell
+                       @@@@@@@***xxxxx
+                   @@@@@@@@@@@**xxxxxxxxxx
+               @@@@@@@@@@@@@@@**xxxxxxxxxxxxxx
+            @@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxx
+          @@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxx
+        @@@@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxxxx
+      @@@@@@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxxxxxx
+     @@@@@@@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxx
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    * deaths 2.16%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    x recovered 52.04%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    @ active 45.80%
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     @@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      @@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxx
+        @@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxx
+          @@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxx
+            @@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxx
+               @@@@@@@@@@@@xxxxxxxxxxxxxxxxxxx
+                   @@@@@@@@xxxxxxxxxxxxxxx
+                       @@@xxxxxxxxxxxx
+                       @@@@@@@********
+                   @@@@@@@@@@@************
+               @@@@@@@@@@@@@@@****************
+            @@@@@@@@@@@@@@@@@@*******************
+          @@@@@@@@@@@@@@@@@@@@*********************
+        @@@@@@@@@@@@@@@@@@@@@@***********************
+      @@@@@@@@@@@@@@@@@@@@@@@@*************************
+     @@@@@@@@@@@@@@@@@@@@@@@@@**************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****************************
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************    * todayCases 51.77%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************    x todayDeaths 0.55%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************    @ todayRecovered 47.68%
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@x****************************
+     @@@@@@@@@@@@@@@@@@@@@@@@x**************************
+      @@@@@@@@@@@@@@@@@@@@@@@**************************
+        @@@@@@@@@@@@@@@@@@@@@************************
+          @@@@@@@@@@@@@@@@@@@**********************
+            @@@@@@@@@@@@@@@@@********************
+               @@@@@@@@@@@@@@*****************
+                   @@@@@@@@@x*************
+                       @@@@@x*********
+
+```
+
+---
+
 **Get specific country data in hash format**
 ```shell
 covid19-cli country canada
@@ -91,6 +181,78 @@ covid19-cli country canada --table
 +---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
 | 108 486 |          0 |  8 798 |           0 |    72 170 |              0 | 27 518 |    2 170 | 3 302 483 |             87 473 |
 +---------+------------+--------+-------------+-----------+----------------+--------+----------+-----------+--------------------+
+```
+
+---
+
+**Render specific country data chart**
+```shell
+covid19-cli country canada --chart
+```
+**Output**
+```shell
+                       @@@@@@@********
+                   @@@@@@@@@@@********xxxx
+               @@@@@@@@@@@@@@@********xxxxxxxx
+            @@@@@@@@@@@@@@@@@@*******xxxxxxxxxxxx
+          @@@@@@@@@@@@@@@@@@@@*******xxxxxxxxxxxxxx
+        @@@@@@@@@@@@@@@@@@@@@@******xxxxxxxxxxxxxxxxx
+      @@@@@@@@@@@@@@@@@@@@@@@@******xxxxxxxxxxxxxxxxxxx
+     @@@@@@@@@@@@@@@@@@@@@@@@@*****xxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****xxxxxxxxxxxxxxxxxxxxxxxx
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****xxxxxxxxxxxxxxxxxxxxxxxx
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@***xxxxxxxxxxxxxxxxxxxxxxxxxx
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@***xxxxxxxxxxxxxxxxxxxxxxxxxxx
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@**xxxxxxxxxxxxxxxxxxxxxxxxxxxxx    * deaths 8.09%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    x recovered 66.72%
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx    @ active 25.19%
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+     xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+            xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+               xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                   xxxxxxxxxxxxxxxxxxxxxxx
+                       xxxxxxxxxxxxxxx
+                       @@@@@@@********
+                   @@@@@@@@@@@************
+               @@@@@@@@@@@@@@@****************
+            @@@@@@@@@@@@@@@@@@*******************
+          @@@@@@@@@@@@@@@@@@@@*********************
+        @@@@@@@@@@@@@@@@@@@@@@***********************
+      @@@@@@@@@@@@@@@@@@@@@@@@*************************
+     @@@@@@@@@@@@@@@@@@@@@@@@@**************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@****************************
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@*****************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************    * todayCases 44.58%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************    x todayDeaths 2.66%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@******************************    @ todayRecovered 52.75%
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@x****************************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@x****************************
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@x***************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@x*************************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@x*************************
+     @@@@@@@@@@@@@@@@@@@@@@@@@@@x***********************
+      @@@@@@@@@@@@@@@@@@@@@@@@@@xx*********************
+        @@@@@@@@@@@@@@@@@@@@@@@@xx*******************
+          @@@@@@@@@@@@@@@@@@@@@@xx*****************
+            @@@@@@@@@@@@@@@@@@@@@xx**************
+               @@@@@@@@@@@@@@@@@@xx***********
+                   @@@@@@@@@@@@@@xx*******
+                       @@@@@@@@@@xxx**
 ```
 
 ---
@@ -127,6 +289,46 @@ covid19-cli all_continents
 |            Africa |   628 885 |          0 |  13 803 |           0 |   316 780 |              0 |   298 302 |      982 |   6 052 901 |           4 512.07 |
 | Australia/Oceania |    12 154 |        239 |     133 |           3 |     9 533 |             93 |     2 488 |       28 |   3 672 053 |          89 719.88 |
 +-------------------+-----------+------------+---------+-------------+-----------+----------------+-----------+----------+-------------+--------------------+
+```
+---
+
+**Render all continent data chart**
+```shell
+covid19-cli all_continents --chart
+```
+**Output**
+```shell
+                       +++%%%%********
+                   +++++++%%%%************
+               +++++++++++%%%%****************
+            +++++++++++++++%%%*******************
+          +++++++++++++++++%%%*********************
+        +++++++++++++++++++%%%***********************
+      ++++++++++++++++++++++%%*************************
+     +++++++++++++++++++++++%%**************************
+   +++++++++++++++++++++++++%%****************************
+   ++++++++++++++++++++++++++%****************************       * North America 30.92%
+  +++++++++++++++++++++++++++%*****************************
+ ++++++++++++++++++++++++++++%******************************     x South America 22.17%
+ +++++++++++++++++++++++++++++******************************
+@@@@++++++++++++++++++++++++++*******************************    @ Asia 23.09%
+@@@@@@@@@@@@@@@@@+++++++++++++*******************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@x******************************    + Europe 19.02%
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxx****************************
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxx*************************    % Africa 4.70%
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxx**********************
+ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxx*******************     # Australia/Oceania 0.09%
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxx****************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxx************
+   @@@@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxx**********
+     @@@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxx*****
+      @@@@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxxx*
+        @@@@@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxxx
+          @@@@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxxxx
+            @@@@@@@@@@@@@@@@xxxxxxxxxxxxxxxxxxxxx
+               @@@@@@@@@@@@@xxxxxxxxxxxxxxxxxx
+                   @@@@@@@@@xxxxxxxxxxxxxx
+                       @@@@@xxxxxxxxxx
 ```
 
 ---
@@ -599,6 +801,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 * [rspec](https://rubygems.org/gems/rspec)
 * [text-table](https://rubygems.org/gems/text-table)
 * [thor](https://rubygems.org/gems/thor)
+* [tty-pie](https://github.com/piotrmurach/tty-pie)
 
 ## Contributing
 
