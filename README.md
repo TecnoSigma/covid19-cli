@@ -2,7 +2,7 @@
 ---
 [![Gem Version](http://badge.fury.io/rb/covid19-cli.svg)](http://badge.fury.io/rb/covid19-cli)
 [![Build Status](https://travis-ci.org/TecnoSigma/covid19-cli.svg?branch=master)](https://travis-ci.org/github/TecnoSigma/covid19-cli)
-[![Coverage Status](https://coveralls.io/repos/TecnoSigma/covid19-cli/badge.svg?branch=master&service=github)](https://coveralls.io/github/TecnoSigma/covid19-cli?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/TecnoSigma/covid19-cli/badge.svg?branch=master)](https://coveralls.io/github/TecnoSigma/covid19-cli?branch=master)
 [![Code Climate](https://codeclimate.com/github/TecnoSigma/covid19-cli/badges/gpa.svg)](https://codeclimate.com/github/TecnoSigma/covid19-cli)
 [![GitHub license](https://img.shields.io/apm/l/vim-mode.svg)](LICENSE)
 
