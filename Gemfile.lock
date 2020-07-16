@@ -28,7 +28,7 @@ GEM
     multi_xml (0.6.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    rake (10.5.0)
+    rake (12.3.3)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -67,7 +67,7 @@ DEPENDENCIES
   bundler (~> 1.7)
   coveralls
   covid19-cli!
-  rake (~> 10.0)
+  rake (~> 12.3)
   rspec (~> 3.0)
 
 BUNDLED WITH
