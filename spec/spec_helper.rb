@@ -1,5 +1,8 @@
 require "bundler/setup"
 require "covid19/client"
+require "coveralls"
+
+Coveralls.wear!
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
