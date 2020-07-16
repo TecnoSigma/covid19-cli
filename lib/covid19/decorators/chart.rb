@@ -29,13 +29,13 @@ module Covid19
                    when TYPES[:all_continent_general_data]
                      mount_all_continent_general_data(data)
                    when TYPES[:continent_general_data]
-                     mount_continent_general_data(data)
-                   when TYPES[:continent_diary_data]
-                     mount_continent_diary_data(data)
+                     mount_general_data(data)
                    when TYPES[:country_general_data]
-                     mount_country_general_data(data)
+                     mount_general_data(data)
+                   when TYPES[:continent_diary_data]
+                     mount_diary_data(data)
                    when TYPES[:country_diary_data]
-                     mount_country_diary_data(data)
+                     mount_diary_data(data)
                    else
                      raise ArgumentError.new('Error in chart plot!')
                    end
@@ -57,29 +57,24 @@ module Covid19
         data.map {|occurrency| {name: occurrency['continent'], value: occurrency['cases']}}
       end
 
-      def self.mount_continent_general_data(data)
+      def self.mount_general_data(data)
         data
           .select { |key, value| GENERAL_TOTALS.include?(key) }
           .map { |occurrency| {name: occurrency.first, value: occurrency.last} }
       end
 
-      def self.mount_continent_diary_data(data)
+      def self.mount_diary_data(data)
         data
           .select { |key, value| DIARY_TOTALS.include?(key) }
           .map { |occurrency| {name: occurrency.first, value: occurrency.last} }
       end
 
-      def self.mount_country_general_data(data)
-        data
-          .select { |key, value| GENERAL_TOTALS.include?(key) }
-          .map { |occurrency| {name: occurrency.first, value: occurrency.last} }
-      end 
+      private_class_method :add_color,
+                           :add_fill,
+                           :mount_all_continent_general_data,
+                           :mount_general_data,
+                           :mount_diary_data
 
-      def self.mount_country_diary_data(data)
-        data
-          .select { |key, value| DIARY_TOTALS.include?(key) }
-          .map { |occurrency| {name: occurrency.first, value: occurrency.last} }
-      end 
     end
   end
 end
